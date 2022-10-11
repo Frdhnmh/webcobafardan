@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Selamat Datang di {% block title %} {% endblock %}</title>
+    <style type="text/css">
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- start navbar top -->
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">HOTEL KEMPINSKI</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kamar">Kamar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fasilitas">Fasilitas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#booking">Booking</a>
+          </li>
+          
+        </ul>
+      </div>
+      </nav>
+      <!-- end navbar top -->
+      <!-- start content -->
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        {% block content %}
+
+        {% endblock %}
+      </div>
+      <!-- end content -->
+
+      <div class="container">
+          <div class="row">
+              <div class="col mt-5">
+                <nav class="navbar navbar-light bg-light px-3 fixed-bottom">
+                    <marquee> | HOTEL KEMPINSKI | Alamat : Jalan Bundaran HI, DKI Jakarta | Phone : 082134833422 | Email : hotelkempinski@gmail.com</marquee>
+              </div>
+          </div>
+      </div>

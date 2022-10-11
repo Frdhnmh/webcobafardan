@@ -1,0 +1,359 @@
+{% extends 'base.html' %}
+{% block title %} Hotel Kempinski {% endblock %}
+
+{% block content %} 
+<!-- Start Menu Home -->
+<div class="container" id="home">
+  <div class="row">
+      <div class="col mt-5">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{{ url_for('static', filename='img/h1.jpg')}}" class="d-block w-100" alt="..." height="300">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Hotel Kempinski</h5>
+                    <p>Hotel dengan pemandangan Bundaran HI pusat kota Jakarta.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename='img/h2.jpeg')}}" class="d-block w-100" alt="..." height="300">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="{{ url_for('static', filename='img/h3.jpeg')}}" class="d-block w-100" alt="..." height="300">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+      </div>
+  </div>
+</div>
+<!-- End Menu Home -->
+
+<!-- Start Deskripsi -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h3>Tentang Kami</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-justify">
+            <p>Hotel Indonesia merupakan hotel pertama di Indonesia yang dibangun dengan standar Internasional. Diresmikan oleh presiden pertama Indonesia yaitu Ir Soekarno, pada tanggal 5 Agustus 1962, Hotel Indonesia telah menjadi landmark bersejarah kebanggaan nasional. Tepat di depan hotel yang terletak strategis di jantung ibu kota, berdiri “Patung Selamat Datang”, dimaksudkan untuk menyambut para tamu yang berkunjung ke Jakarta pada Asian Games tahun 1962 silam.</p>
+        </div>
+        <div class="col text-justify">
+            <p>Dekorasi modern dan jendela dari lantai ke langit-langit ditampilkan di seluruh kamar yang luas di Kempinski Indonesia. Setiap kamar yang ditata apik dilengkapi dengan TV layar datar, dan kamar mandi dalam dengan bak mandi dan shower hujan. Hotel Indonesia Kempinski Jakarta bisa dicapai dalam 10 menit berkendara dari Monumen Nasional dan 20 menit berkendara dari Kota Batavia Lama. Parkir gratis disediakan.</p>
+        </div>
+    </div>
+</div>
+<!-- End Deskripsi -->
+
+<!-- Start Kamar -->
+<div class="container" id="kamar">
+    <div class="row">
+        <div class="col text-center">
+            <h3>Tipe Kamar</h3>
+        </div>
+    </div>
+
+    <!-- Start Kamar Deluxe -->
+    <div class="row">
+        <div class="col-md">
+            <div class="card">
+              <img src="{{ url_for('static', filename='img/kdeluxe.jpeg') }}" class="card-img-top" alt="...">
+                <h4><div class="card-header">Tipe Deluxe
+                    <span class="float-end">Rp.2.500.000.00,-</span>
+                    </div></h4>
+                <div class="card-body">
+                  <p class="card-text">Smart LED TV 40 PLD</p>
+                  <p class="card-text">Wi-Fi Faster</p>
+                  <p class="card-text">Kamar mandi luas dengan bath up dan shower terpisah</p>
+                  <p class="card-text">Coffee Marker</p>
+                  <p class="card-text">Meja Kerja</p>
+                  <div class="d-grid gap-2">
+                  <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- End Deluxe -->
+
+    <!-- Start Kamar Grand Deluxe -->
+    <div class="row">
+        <div class="col-md">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/kgde.jpeg') }}" class="card-img-top" alt="...">
+                    <h4><div class="card-header">Tipe Grand Deluxe
+                        <span class="float-end">Rp.3.000.000.00,-</span>
+                    </div></h4>
+                    <div class="card-body">
+                      <p class="card-text">Smart LED TV 40 PLD</p>
+                      <p class="card-text">Wi-Fi Faster</p>
+                      <p class="card-text">Kamar mandi luas dengan bath up dan shower terpisah</p>
+                      <p class="card-text">Coffee Marker</p>
+                      <p class="card-text">Meja Kerja</p>
+                      <p class="card-text">Hair Dryer</p>
+                      <p class="card-text">White Board</p>
+                      <div class="d-grid gap-2">
+                      <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Grand Deluxe -->
+
+    <!-- Start Kamar Executive Deluxe -->
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/kdeluxe.jpeg') }}" class="card-img-top" alt="...">
+                    <h4><div class="card-header">Tipe Executive Deluxe
+                        <span class="float-end">Rp.3.500.000.00,-</span>
+                    </div></h4>
+                    <div class="card-body">
+                      <p class="card-text">Smart LED TV 40 PLD</p>
+                      <p class="card-text">Wi-Fi Faster</p>
+                      <p class="card-text">Kamar mandi luas dengan bath up dan shower terpisah</p>
+                      <p class="card-text">Coffee Marker</p>
+                      <p class="card-text">Meja Kerja</p>
+                      <p class="card-text">Hair Dryer</p>
+                      <p class="card-text">White Board</p>
+                      <div class="d-grid gap-2">
+                      <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+    <!-- End Executive Deluxe -->
+
+    <!-- Start Kamar Grand Executive Deluxe -->
+      <div class="col mb-3">
+          <div class="card">
+              <img src="{{ url_for('static', filename='img/kgede.jpeg') }}" class="card-img-top" alt="...">
+                    <h4><div class="card-header">Tipe Grand Executive Deluxe
+                        <span class="float-end">Rp.5.700.000.00,-</span>
+                    </div></h4>
+                    <div class="card-body">
+                      <p class="card-text">Smart LED TV 40 PLD</p>
+                      <p class="card-text">Wi-Fi Faster</p>
+                      <p class="card-text">Kamar mandi luas dengan bath up dan shower terpisah</p>
+                      <p class="card-text">Coffee Marker</p>
+                      <p class="card-text">Meja Kerja</p>
+                      <p class="card-text">Hair Dryer</p>
+                      <p class="card-text">Brangkas Keamanan</p>
+                      <p class="card-text">White Board</p>
+                      <div class="d-grid gap-2">
+                      <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                    </div>
+          </div>
+      </div>
+    <!-- End Grand Executive Deluxe-->
+</div>
+<!-- End Kamar -->
+
+<!-- Start Fasilitas -->
+<div class="container" id="fasilitas">
+    <div class="row">
+        <div class="col text-center mb-3">
+            <h3>Fasilitas Hotel</h3>
+        </div>
+    </div>
+
+    <div class="row">
+      <!-- Start Ruang Rapat -->
+      <div class="col-md">
+          <div class="card">
+              <img src="{{ url_for('static', filename='img/rm.jpeg')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Ruang Rapat</h5>
+                <p class="card-text">Tersedia ruang untuk bermusyawarah dengan design kedap suara dilengkapi AC, Wi-Fi, proyektor, dan whiteboard.</p>
+              </div>
+            </div>
+      </div>
+      <!-- End Ruang Rapat -->
+
+      <!-- Start Kolam Renang -->
+      <div class="col-md">
+          <div class="card">
+              <img src="{{ url_for('static', filename='img/kr.jpeg')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Kolam Renang</h5>
+                <p class="card-text">Tersedia kolam renang tempat untuk bermain air dan olahraga air lainnya.</p>
+              </div>
+            </div>
+      </div>
+      <!-- End Kolam Renang -->
+
+      <!-- Start Gym -->
+      <div class="col-md mb-3">
+          <div class="card">
+              <img src="{{ url_for('static', filename='img/rfit.jpeg')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Gym</h5>
+                <p class="card-text">Tersedia ruangan untuk olahraga membentuk otot dan badan Anda menjadi lebih berisi.</p>
+              </div>
+            </div>
+      </div>
+      <!-- end gambar fasilitas 3 baris 1 -->
+  </div>
+
+  <div class="row">
+      <!-- Start Ruang Santai -->
+      <div class="col-md">
+          <div class="card">
+              <img src="{{ url_for('static', filename='img/rsantai.jpeg')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Ruang Santai</h5>
+                <p class="card-text">Bila Anda jenuh, tersedia ruangan untuk berbincang santai dengan design aesthetic.</p>
+              </div>
+            </div>
+      </div>
+      <!-- End Ruang Santai -->
+
+      <!-- Start Playground -->
+      <div class="col-md">
+          <div class="card">
+              <img src="{{ url_for('static', filename='img/pground.jpeg')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">Tempat Bermain Anak</h5>
+                <p class="card-text">Tersedia juga ruangan untuk bermain anak yang aman dan tidak berbahaya.</p>
+              </div>
+            </div>
+      </div>
+      <!-- End Playground -->
+
+      <!-- Start Ruang SPA -->
+      <div class="col-md mb-5">
+          <div class="card">
+              <img src="{{ url_for('static', filename='img/rmassage.jpeg')}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">SPA</h5>
+                <p class="card-text">Bila Anda lelah dan perlu peregangan otot, tersedia ruang SPA untuk memanjakan badan Anda.</p>
+              </div>
+            </div>
+      </div>
+      <!-- End Ruang SPA -->
+
+  </div>
+</div>
+<!-- End Fasilitas -->
+
+<!-- Start Booking Kamar -->
+<div class="container" id="booking">
+    <div class="row">
+        <div class="col text-center mb-3">
+            <h4>Formulir Booking Room</h4>
+        </div>
+        <div class="row">
+          <div class="col">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                
+                {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Terima Kasih!</strong> {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                  
+
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <!-- start ini alamat hotel -->
+      <div class="col-lg-4">
+          <div class="card text-white bg-secondary">
+              <div class="card-body">
+                  <div class="card-title text-center"><h3>Hubungi Kami</h3></div>
+              </div>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item"><h3>Kantor</h3></li>
+              <li class="list-group-item">Jl. Bundaran HI</li>
+              <li class="list-group-item">Jakarta Pusat, DKI Jakarta</li>
+              <li class="list-group-item">Phone : 082134833422</li>
+              <li class="list-group-item">email: hotelkempinski@gmail.com</li>
+            </ul>            
+      </div>
+      <!-- end ini alamat hotel -->
+
+      <!-- start Form Pemesanan Kamar -->
+      <div class="col-lg-4">
+        <form action="/#booking" method="post">
+        <div class="mb-3">
+          <label for="nama" class="form-label">Nama Pemesan</label>
+          <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Anda" name="nama" autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+          <label for="nik" class="form-label">NIK</label>
+          <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK Anda" name="nama" autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email Anda" name="email" autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">No. Handphone</label>
+          <input type="text" class="form-control" id="phone" placeholder="Nomor HP Anda" name="phone" autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+          <label for="ket" class="form-label">Keterangan</label>
+          <textarea class="form-control" id="ket" rows="3" name="ket"></textarea>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <label for="tipe" class="form-label">Type Kamar</label>
+        <select class="form-select" aria-label="Default select example" name="tipe">
+          <option value=""></option>
+          <option value="Single Room">Deluxe Room</option>
+          <option value="Superior Room">Grand Deluxe Room</option>
+          <option value="Deluxe Room">Executive Deluxe Room</option>
+          <option value="Junior Suite Room">Grand Executive Deluxe Room</option>
+        </select>
+        <div class="mb-3">
+          <label for="checkin" class="form-label">Tanggal Check In</label>
+          <input type="date" class="form-control" id="checkin" name="checkin" required>
+        </div>
+        <div class="mb-3">
+          <label for="checkout" class="form-label">Tanggal Check Out</label>
+          <input type="date" class="form-control" id="checkout" name="checkout" required>
+        </div>
+        <div class="mb-3">
+          <label for="jml" class="form-label">Jumlah Kamar</label>
+          <input type="number" class="form-control" id="jml" name="jml" required>
+        </div>
+        <div class="d-grid gap-2">
+       <button type="submit" class="btn btn-success btn-lg btn-block" onclick="confirm('Anda Yakin')">Konfirmasi Pemesanan</button></div>
+      </div>
+    </form>
+      <!-- end Form Pemesanan Kamar -->
+
+  </div>
+</div>
+
+
+{% endblock %}

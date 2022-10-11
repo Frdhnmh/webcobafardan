@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Selamat Datang di Menu Admin{% block title %} {% endblock %}</title>
+    <style type="text/css">
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- start navbar top -->
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"> ADMIN HOTEL KEMPINSKI</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#kamar">DATA CUSTOMER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fasilitas">DATA KAMAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#booking">DATA FASILITAS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Admin</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Settings</a></li>              
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      </nav>
+      <!-- end navbar top -->
+      <!-- start content -->
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        {% block content %}
+            <div class="container">
+                <div class="row">
+                    <div class="col mt-5 text-center">
+                        <h2>Data Customer</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nama Pemesan</th>
+                                    <th scope="col">NIK</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Tipe</th>
+                                    <th scope="col">Checkin</th>
+                                    <th scope="col">Checkout</th>
+                                    <th scope="col">Jumlah</th>
+                                    <th scope="col">Keterangan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in datapemesan %}
+                                  <tr>
+                                    <th scope="row">{{ loop.index }}</th>
+                                    <td>{{ row[1] }}</td>
+                                    <td>{{ row[2] }}</td>
+                                    <td>{{ row[3] }}</td>
+                                    <td>{{ row[4] }}</td>
+                                    <td>{{ row[5] }}</td>
+                                    <td>{{ row[6] }}</td>
+                                    <td>{{ row[7] }}</td>
+                                    <td>{{ row[8] }}</td>
+                                    <td>{{ row[9] }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#detailModal">Detail</button>
+                                        <button type="button" class="btn btn-success">Update</button>
+                                        <button type="button" class="btn btn-danger">Delete</button>
+                                    </td>
+                                  </tr>
+                                  {% include "customerdetail.html" %}
+                                  {% endfor %}
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+      </div>
+      <!-- end content -->
+
+      <div class="container">
+          <div class="row">
+              <div class="col mt-5">
+                <nav class="navbar navbar-light bg-light px-3 fixed-bottom">
+                    <marquee> | HOTEL KEMPINSKI | Alamat : Jalan Bundaran HI, DKI Jakarta | Phone : 082134833422 | Email : hotelkempinski@gmail.com</marquee>
+              </div>
+          </div>
+      </div>
